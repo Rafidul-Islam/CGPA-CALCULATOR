@@ -5,8 +5,12 @@ document
     const p = document.createElement("p");
     p.classList.add("p", "text-2xl", "text-white");
     if (num) {
-      const result = 0.05 * num;
-      p.innerText = `Your CGPA is ${result.toFixed(2)}`;
+      if (num >= 80 && num <= 100) {
+        p.innerText = `Congratulations!! Your CGPA is 4.00`;
+      } else if (num >= 40 && num <= 80) {
+        const result = 0.05 * num;
+        p.innerText = `Your CGPA is ${result.toFixed(2)}`;
+      }
     } else {
       p.innerText = `Please Enter Number`;
     }
