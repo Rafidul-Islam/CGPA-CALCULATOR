@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      .div {
+        border-radius: 20px ;
+      }
+      #div2 {
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-600 h-screen flex justify-center items-center">
+    <div class="space-y-4">
+      <div class="div flex flex-col space-y-4 bg-green-500 p-10">
+        <h2 class="text-xl">Enter Your Expected Number</h2>
+        <input
+          type="text"
+          name=""
+          id="num"
+          class="border p-2 rounded-sm"
+          placeholder="Enter Number (0-100)"
+        />
+        <div>
+          <button id="enter-btn" class="px-3 py-1 rounded bg-white text-black">
+            Enter
+          </button>
+          <button id="clear-btn" class="px-3 py-1 rounded bg-white text-black">
+            Clear
+          </button>
+        </div>
+      </div>
+      <div id="div2" class="bg-green-500 p-4 hidden"></div>
+    </div>
+  </body>
+  <script src="cg.js"></script>
+</html>
