@@ -10,6 +10,8 @@ document
       } else if (num >= 40 && num <= 80) {
         const result = 0.05 * num;
         p.innerText = `Your CGPA is ${result.toFixed(2)}`;
+      } else if (num >= 0 && num <= 39) {
+        p.innerText = `FAILED`;
       }
     } else {
       p.innerText = `Please Enter Number`;
@@ -19,15 +21,19 @@ document
   });
 
 document.getElementById("num").addEventListener("keydown", function (event) {
-  const num = parseInt(document.querySelector("#num").value);
-  const p = document.createElement("p");
   if (event.key === "Enter") {
     const num = parseInt(document.querySelector("#num").value);
     const p = document.createElement("p");
     p.classList.add("p", "text-2xl", "text-white");
     if (num) {
-      const result = 0.05 * num;
-      p.innerText = `Your CGPA is ${result.toFixed(2)}`;
+      if (num >= 80 && num <= 100) {
+        p.innerText = `Congratulations!! Your CGPA is 4.00`;
+      } else if (num >= 40 && num <= 80) {
+        const result = 0.05 * num;
+        p.innerText = `Your CGPA is ${result.toFixed(2)}`;
+      } else if (num >= 0 && num <= 39) {
+        p.innerText = `FAILED`;
+      }
     } else {
       p.innerText = `Please Enter Number`;
     }
