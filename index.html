@@ -7,7 +7,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
       .div {
-        border-radius: 20px ;
+        border-radius: 20px;
       }
       #div2 {
         border-radius: 20px;
@@ -17,7 +17,7 @@
   <body class="bg-gray-600 h-screen flex justify-center items-center">
     <div class="space-y-4">
       <div class="div flex flex-col space-y-4 bg-green-500 p-10">
-        <h2 class="text-xl">Enter Your Expected Number</h2>
+        <h2 class="text-2xl">Enter Your Expected Number</h2>
         <input
           type="text"
           name=""
@@ -25,16 +25,21 @@
           class="border p-2 rounded-sm"
           placeholder="Enter Number (0-100)"
         />
-        <div>
-          <button id="enter-btn" class="px-3 py-1 rounded bg-white text-black">
+        <div class="flex justify-between">
+          <button
+            id="enter-btn"
+            class="px-3 py-1 rounded bg-white text-black text-2xl"
+          >
             Enter
           </button>
-          <button id="clear-btn" class="px-3 py-1 rounded bg-white text-black">
+          <button
+            id="clear-btn"
+            class="px-3 py-1 rounded bg-white text-black text-2xl"
+          >
             Clear
           </button>
         </div>
       </div>
-      <div id="div2" class="bg-green-500 p-4 hidden"></div>
     </div>
   </body>
   <script src="cg.js"></script>
